@@ -21,8 +21,13 @@ def innerJoin(left_table, right_table):
                 left_entry.update(right_entry)
                 # print(left_entry)
                 results.append(left_entry)
+    for k, result in enumerate(results):
+        if 'cid' in result: 
+            del result['cid']
     pprint(results)
 
+def left_outerJoin(left_table, right_table):
+    pass
 
 
 
